@@ -5,8 +5,8 @@ import numpy as np
 st.title("Laptop Price Calculator 🚀")
 st.header("Made with ❤️ by Ayush")
 
-pipe = pkl.load(open('C:\\Users\\ayush\\Desktop\\Laptop-Price-Calculator\\pipe.pkl', 'rb'))
-df = pkl.load(open('C:\\Users\\ayush\\Desktop\\Laptop-Price-Calculator\\df.pkl', 'rb'))
+pipe = pkl.load(open('/pipe.pkl', 'rb'))
+df = pkl.load(open('/df.pkl', 'rb'))
 
 company = st.selectbox("Brand", df['Company'].unique())
 type = st.selectbox("Type of Laptop", df['TypeName'].unique())
