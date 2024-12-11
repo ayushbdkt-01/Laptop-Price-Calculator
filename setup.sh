@@ -1,5 +1,4 @@
-mkdir -p ~/.streamlit/
-
+mkdir -p ~/.streambit/
 echo "\
 [server]\n\
 port = $PORT\n\
