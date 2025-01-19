@@ -72,7 +72,6 @@ numpy==1.26.4
 orjson==3.10.12
 packaging==24.2
 pandas==2.2.3
-pandas-profiling==3.2.0
 parso==0.8.4
 phik==0.12.4
 pillow==11.0.0
