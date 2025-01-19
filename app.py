@@ -100,16 +100,27 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-pipe = pkl.load(open("pipe.pkl", 'rb'))
-df = pkl.load(open("df.pkl", 'rb'))
+# pipe = pkl.load(open("pipe.pkl", 'rb'))
+# df = pkl.load(open("df.pkl", 'rb'))
 
 # Title and Header
 st.title("Laptop Price Calculator 💻")
 st.subheader("Made with ❤️ by Ayush")
 
-# Load Model and Data
+# # Load Model and Data
 pipe = pkl.load(open('C:\\Users\\ayush\\Desktop\\Laptop-Price-Calculator\\pipe.pkl', 'rb'))
 df = pkl.load(open('C:\\Users\\ayush\\Desktop\\Laptop-Price-Calculator\\df.pkl', 'rb'))
+
+
+# import os
+# pipe_path = os.path.join(os.path.dirname(__file__), "pipe.pkl")
+# df_path = os.path.join(os.path.dirname(__file__), "df.pkl")
+
+# pipe = pkl.load(open(pipe_path, "rb"))
+# df = pkl.load(open(df_path, "rb"))
+
+
+
 
 # Inputs
 st.sidebar.header("Customize Laptop Specifications")
@@ -155,14 +166,14 @@ if st.sidebar.button("💸 Predict Price"):
     st.balloons()
 
 # Add a footer
-st.markdown(
-    """
-    <hr>
-    <footer style="text-align: center; color: #999;">
-        Made with <span style="color: red;">❤️</span> using Streamlit | Ayush Budhlakoti
-    </footer>
-    """,
-    unsafe_allow_html=True,
-)
-st.title('Predicted Price: ₹')
-st.title(int(np.exp(pipe.predict(query))[0]))
+    st.markdown(
+        """
+        <hr>
+        <footer style="text-align: center; color: #999;">
+            Made with <span style="color: red;">❤️</span> using Streamlit | Ayush Budhlakoti
+        </footer>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.title('Predicted Price: ₹')
+    st.title(int(np.exp(pipe.predict(query))[0]))
