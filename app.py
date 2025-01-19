@@ -108,8 +108,10 @@ st.title("Laptop Price Calculator 💻")
 st.subheader("Made with ❤️ by Ayush")
 
 # # Load Model and Data
-pipe = pkl.load(open('C:\Users\ayush\Desktop\Laptop-Price-Calculator\pipe.pkl', 'rb'))
-df = pkl.load(open('C:\Users\ayush\Desktop\Laptop-Price-Calculator\df.pkl', 'rb'))
+# pipe = pkl.load(open('C:\Users\ayush\Desktop\Laptop-Price-Calculator\pipe.pkl', 'rb'))
+# df = pkl.load(open('C:\Users\ayush\Desktop\Laptop-Price-Calculator\df.pkl', 'rb'))
+pipe = pkl.load(open('C:/Users/ayush/Desktop/Laptop-Price-Calculator/pipe.pkl', 'rb'))
+df = pkl.load(open('C:/Users/ayush/Desktop/Laptop-Price-Calculator/df.pkl', 'rb'))
 
 
 # import os
