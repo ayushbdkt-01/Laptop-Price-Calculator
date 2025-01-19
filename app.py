@@ -100,6 +100,8 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+pipe = pkl.load(open("pipe.pkl", 'rb'))
+df = pkl.load(open("df.pkl", 'rb'))
 
 # Title and Header
 st.title("Laptop Price Calculator 💻")
@@ -162,3 +164,5 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+st.title('Predicted Price: ₹')
+st.title(int(np.exp(pipe.predict(query))[0]))
